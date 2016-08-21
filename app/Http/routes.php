@@ -12,5 +12,27 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('/info-bir', function() {
+	return view('BIR-regis');
+});
+
+Route::get('/info-pag-ibig', function() {
+	return view('pag-ibig-regis');
+});
+
+Route::get('/info-SSS', function() {
+	return view('SSS-regis');
+});
+
+Route::get('/birregisdone', function() {
+	return view('birregisdone');
+	// It should be birrregisdonex, but FPDF is failing at an error that it cannot find the variable => fpdf
+});
+

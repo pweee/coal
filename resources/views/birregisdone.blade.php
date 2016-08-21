@@ -1,0 +1,1 @@
+<img src="output.png" width="600" height="333" />
